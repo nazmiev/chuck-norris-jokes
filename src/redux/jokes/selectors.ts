@@ -1,3 +1,3 @@
 import { RootState } from "../store";
 
-export const selectBooksData = (state: RootState) => state.jokes;
+export const selectJokesData = (state: RootState) => state.jokes;

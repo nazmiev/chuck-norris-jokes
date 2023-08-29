@@ -6,7 +6,7 @@ export const fetchJokes = createAsyncThunk<Jokes[], SearchJokesParams>(
     'books/fetchBooksStatus',
     async (params) => {
         const { search } = params;
-        console.log('params: ', params);
+        // console.log('params: ', params);
         const { data } = await axios.get<JokesResponse>(
             `https://api.chucknorris.io/jokes/search`, {
             params: { query: search }
