@@ -2,7 +2,7 @@ import ContentLoader from "react-content-loader"
 
 const Skeleton = () => (
   <ContentLoader 
-    className="book-block"
+    className="joke-block"
     speed={2}
     width={280}
     height={470}

@@ -9,7 +9,7 @@ const initialState: JokesSliceState = {
 };
 
 const jokesSlice = createSlice({
-    name: "books",
+    name: "jokes",
     initialState,
     reducers: {
         setItems(state, action: PayloadAction<Jokes[]>) {
@@ -22,8 +22,8 @@ const jokesSlice = createSlice({
             state.items = [];
         });
         builder.addCase(fetchJokes.fulfilled, (state, action) => {
-            state.items = action.payload;
             state.status = Status.SUCCESS;
+            state.items = action.payload;
         });
         builder.addCase(fetchJokes.rejected, (state) => {
             state.status = Status.ERROR;

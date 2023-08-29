@@ -1,3 +1,16 @@
 .root {
-    background-color: red;
+    box-shadow: 0px 7px 25px 0px #64646F33;
+    padding: 40px 40px 25px;
+
+    max-width: 788px;
+    max-height: 262px;
+
+    @media (max-width: 1636px) {
+        max-width: 518px;
+        max-height: 150px;
+    }
+
+    @media (max-width: 558px) {
+        max-width: 100%;
+    }
 }

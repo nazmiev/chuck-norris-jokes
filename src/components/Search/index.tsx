@@ -1,13 +1,15 @@
 import React from "react";
 import debounce from "lodash.debounce";
 import styles from "./Search.module.scss";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setSearchValue } from "../../redux/filter/slice";
+import { selectJokesData } from "../../redux/jokes/selectors";
 
 const Search:React.FC = () => {
   const dispatch = useDispatch();
   const [value, setValue] = React.useState("");
   const inputRef = React.useRef<HTMLInputElement>(null);
+  const { items, status } = useSelector(selectJokesData);
 
   const updateSearchValue = React.useCallback(
     debounce((str: string) => {
@@ -30,6 +32,10 @@ const Search:React.FC = () => {
         className={styles.input}
         placeholder="Search jokes..."
       />
+      {status === 'success' ?
+        (<span className={styles.counter}>Found jokes: {items.length}</span>) 
+        : <></>
+      }
     </div>
   );
 };
