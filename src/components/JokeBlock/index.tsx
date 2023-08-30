@@ -9,6 +9,7 @@ type JokeProps = {
 }
 
 const JokeBlock: React.FC<JokeProps> = ({ value, id, created_at, url }) => {
+  const prettyDate = new Date(created_at).toLocaleDateString("ru-RU");;
   return (
     <article className={styles.root} onClick={() => {
         location.href = `${url}`
@@ -22,7 +23,7 @@ const JokeBlock: React.FC<JokeProps> = ({ value, id, created_at, url }) => {
               {id}
           </span>
           <span>
-              {created_at}
+              {prettyDate}
           </span>
         </section>
     </article>
