@@ -1,21 +1,30 @@
 .root {
     display: flex;
+    gap: 10px;
     flex-direction: column;
     justify-content: space-between;
     font-family: 'Fira Sans';
     font-weight: 400;
     font-size: calc(min(20px, 4.2vw));
-    line-height: calc(min(20px, 6.3vw));;
+    line-height: 1.5;
+    word-wrap: break-word;
     box-shadow: 0px 7px 25px 0px #64646F33;
     padding: calc(min(40px,3.8vh)) calc(min(40px,3.8vh)) 25px;
     padding-bottom: calc(min(25px,2.4vh));
     box-sizing: border-box;
-    width: 788px;
-    height: 262px;
+    width: 518px;
+    min-height: 150px;
+
+    @media (min-width: 1637px) {
+        &:nth-child(-n+2) {
+            width: 788px;
+            min-height: 262px;
+        }
+    }
 
     @media (max-width: 1636px) {
         width: 518px;
-        height: 150px;
+        min-height: 150px;
     }
 
     @media (max-width: 558px) {
