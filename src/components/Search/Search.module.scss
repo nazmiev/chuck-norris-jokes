@@ -1,10 +1,9 @@
 .root {
-    position: relative;
     max-width: 626px;
     max-height: 64px;
     margin: 0 auto;
     margin-top: calc(min(128px,11.9vh));
-    margin-bottom: calc(min(60px,5.6vh));
+    margin-bottom: calc(min(100px,20vh));
     box-shadow: 0px 7px 12px 0px #64646F33;
 }
 
@@ -30,12 +29,11 @@
 }
 
 .counter {
-    margin-left: 36px;
-    color: #282626;
-    // font-family: Montserrat;
+    font-family: 'Montserrat';
     font-size: 16px;
+    font-size: calc(min(14px, 3.3vw));
     font-weight: 400;
     line-height: 20px;
-    letter-spacing: 0px;
-    text-align: center;
+    color: #282626;
+    margin-left: 36px;
 }

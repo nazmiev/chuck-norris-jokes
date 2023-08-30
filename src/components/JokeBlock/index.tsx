@@ -4,22 +4,25 @@ import styles from "./JokeBlock.module.scss"
 type JokeProps = {
   id: string,
   value: string,
-  date: string,
+  created_at: string,
 }
 
-const JokeBlock: React.FC<JokeProps> = ({ value, id, date }) => {
+const JokeBlock: React.FC<JokeProps> = ({ value, id, created_at }) => {
   return (
-    <div className={styles.root}>
-        <h4>
+    <article className={styles.root}>
+        <span>
             {value}
-        </h4>
-        <span>
-            {id}
         </span>
-        <span>
-            {date}
-        </span>
-    </div>
+        
+        <section>
+          <span>
+              {id}
+          </span>
+          <span>
+              {created_at}
+          </span>
+        </section>
+    </article>
   );
 }
 

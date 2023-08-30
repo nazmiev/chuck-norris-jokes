@@ -33,7 +33,7 @@ const Search:React.FC = () => {
         placeholder="Search jokes..."
       />
       {status === 'success' ?
-        (<span className={styles.counter}>Found jokes: {items.length}</span>) 
+        (<p className={styles.counter}>Found jokes: {items.length}</p>) 
         : <></>
       }
     </div>
