@@ -9,7 +9,7 @@ const Search:React.FC = () => {
   const dispatch = useDispatch();
   const [value, setValue] = React.useState("");
   const inputRef = React.useRef<HTMLInputElement>(null);
-  const { items, status } = useSelector(selectJokesData);
+  const { items } = useSelector(selectJokesData);
 
   const updateSearchValue = React.useCallback(
     debounce((str: string) => {
@@ -33,7 +33,7 @@ const Search:React.FC = () => {
         className={styles.input}
         placeholder="Search jokes..."
       />
-      {status === 'success' ?
+      {items.length > 0 ?
         (<p className={styles.counter}>Found jokes: {items.length}</p>) 
         : <></>
       }
