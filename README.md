@@ -1,27 +1,21 @@
-# React + TypeScript + Vite
+- [Рабочий прототип](https://nazmiev.github.io/chuck-norris-jokes/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Тестовое задание Frontend Developer
 
-Currently, two official plugins are available:
+Нужно реализовать поиск по элементам и отобразить найденные элементы на странице с помощью приведенного API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+При заходе на страницу пользователь изначально видит только поиск, в который может ввести значение.
+- [Дизайн](https://www.figma.com/file/aAixOWyuOavW7AG7iurAcp/Frontend-test-task-%E2%80%94-Chucknorris)
+- [API](https://api.chucknorris.io/)
 
-## Expanding the ESLint configuration
+## Технические требования:
+- Адаптивная вёрстка от 320px до 1920px
+- Поддержка браузеров: последняя версия Chrome
+- Использование React или Vue
+- Использование любого стейт-менеджера на выбор (Redux, MobX, Effector, Vuex и т.д.)
+- Если в дизайне чего-то не хватает, попытаться самостоятельно отобразить в интерфейсе
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Требования задачи:
+- Поиск автоматически должен быть в фокусе для удобства
+- При введении более трех символов должен отправляться запрос к API
+- Каждая карточка ведёт на страницу из поля URL элемента
