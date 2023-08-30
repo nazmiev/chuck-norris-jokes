@@ -21,7 +21,7 @@ function App() {
 
   React.useEffect(() => {
     getJokes();
-  }, [searchValue]);
+  }, [searchValue.length >= 3]);
 
   const jokes = items.map((obj: any) => (<JokeBlock key={obj.id} {...obj} />));
   const skeletons = [...new Array(6)].map((_, index) => (<Skeleton key={index} />));
