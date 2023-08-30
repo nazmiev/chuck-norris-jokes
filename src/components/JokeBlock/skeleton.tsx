@@ -2,19 +2,14 @@ import ContentLoader from "react-content-loader"
 
 const Skeleton = () => (
   <ContentLoader 
-    className="joke-block"
     speed={2}
-    width={280}
-    height={470}
-    viewBox="0 0 280 500"
+    width={320}
+    height={320}
+    viewBox="0 0 320 320"
     backgroundColor="#f3f3f3"
     foregroundColor="#ecebeb"
   >
-    <circle cx="140" cy="125" r="123" /> 
-    <rect x="0" y="280" rx="5" ry="5" width="280" height="25" /> 
-    <rect x="0" y="330" rx="5" ry="5" width="280" height="90" /> 
-    <rect x="0" y="450" rx="5" ry="5" width="95" height="30" /> 
-    <rect x="125" y="440" rx="20" ry="20" width="152" height="45" />
+    <circle cx="160" cy="160" r="160" />
   </ContentLoader>
 )
 
