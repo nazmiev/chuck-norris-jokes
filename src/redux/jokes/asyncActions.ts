@@ -4,11 +4,10 @@ import axios from "axios";
 
 export const fetchJokes = createAsyncThunk<Jokes[], SearchJokesParams>(
     'jokes/fetchJokesStatus',
-    async (params) => {
-        const { search } = params;
+    async (params: SearchJokesParams) => {
         const { data } = await axios.get<JokesResponse>(
             `https://api.chucknorris.io/jokes/search`, {
-            params: { query: search }
+            params: params
         });
         return data.result;
     }

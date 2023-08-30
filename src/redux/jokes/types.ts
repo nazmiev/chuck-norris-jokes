@@ -23,5 +23,5 @@ export interface JokesSliceState {
 }
 
 export type SearchJokesParams = {
-  search: string, 
+  query: string, 
 }

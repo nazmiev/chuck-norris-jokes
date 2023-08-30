@@ -8,6 +8,7 @@ import { selectJokesData } from "./redux/jokes/selectors";
 import JokeBlock from "./components/JokeBlock";
 import Skeleton from "./components/JokeBlock/skeleton";
 import styles from "./styles/App.module.scss"
+import { SearchJokesParams } from "./redux/jokes/types";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -15,13 +16,17 @@ function App() {
   const { searchValue } = useSelector(selectFilter);
 
   const getJokes = async () => {
-    const search = searchValue ? searchValue : "";
-    dispatch(fetchJokes({search}))
+    const params: SearchJokesParams = {
+      query: searchValue ? searchValue : "",
+    }
+    dispatch(fetchJokes(params))
   }
 
   React.useEffect(() => {
-    getJokes();
-  }, [searchValue.length >= 3]);
+    if (searchValue.length >= 3) {
+      getJokes();
+    }
+  }, [searchValue]);
 
   const jokes = items.map((obj: any) => (<JokeBlock key={obj.id} {...obj} />));
   const skeletons = [...new Array(6)].map((_, index) => (<Skeleton key={index} />));

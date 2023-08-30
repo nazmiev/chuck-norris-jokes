@@ -5,7 +5,7 @@ import { fetchJokes } from "./asyncActions";
 
 const initialState: JokesSliceState = {
     items: [],
-    status: Status.LOADING,
+    status: Status.SUCCESS,
 };
 
 const jokesSlice = createSlice({
