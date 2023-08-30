@@ -28,6 +28,7 @@ const Search:React.FC = () => {
       <input
         ref={inputRef}
         value={value}
+        autoFocus 
         onChange={onChangeInput}
         className={styles.input}
         placeholder="Search jokes..."
